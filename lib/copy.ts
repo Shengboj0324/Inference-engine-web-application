@@ -37,7 +37,7 @@ export const HERO = {
     '10 business-intent signal types using calibrated LLM inference, and ' +
     'delivers a prioritised action queue — running entirely on your machine.',
   ctas: {
-    primary: { label: 'Get Started — Deploy in 5 minutes', href: '/docs' },
+    primary: { label: 'Deploy in 5 minutes', href: '/docs/deployment' },
     secondary: { label: 'View on GitHub', href: SITE.repoUrl },
   },
   stats: ['593 tests passing', 'MIT License', 'Python 3.11 · FastAPI · pgvector'],

@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Github, Menu, X, Zap } from 'lucide-react'
-import { SITE, NAV } from '@/lib/copy'
+import { NAV } from '@/lib/copy'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)

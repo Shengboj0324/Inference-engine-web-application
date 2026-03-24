@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { Github, ArrowRight, Radar, Terminal } from 'lucide-react'
-import { HERO, SITE } from '@/lib/copy'
+import { HERO } from '@/lib/copy'
 
 function SignalQueueMockup() {
   const signals = [

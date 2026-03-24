@@ -11,6 +11,7 @@ import Calibration from '@/components/calibration'
 import Benchmarks from '@/components/benchmarks'
 import TeamWorkflow from '@/components/team-workflow'
 import DeploymentSteps from '@/components/deployment-steps'
+import LiveDemoSection from '@/components/live-demo-section'
 import FAQ from '@/components/faq'
 import Footer from '@/components/footer'
 
@@ -31,6 +32,7 @@ export default function Home() {
         <Benchmarks />
         <TeamWorkflow />
         <DeploymentSteps />
+        <LiveDemoSection />
         <FAQ />
       </main>
       <Footer />

@@ -5,8 +5,6 @@
 :root {
   --background: #050A14;
   --foreground: #E8EEFF;
-  --font-geist-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-geist-mono: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
 * {
@@ -171,5 +169,52 @@ pre code {
   background: #0D1829 !important;
   border: 1px solid #1A2744 !important;
   border-radius: 8px !important;
+}
+
+/* ── Accessibility: Reduce motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-in,
+  .animate-fade-up,
+  .animate-float,
+  .animate-pulse,
+  .animate-spin,
+  .animate-bounce,
+  .animate-ping {
+    animation: none !important;
+  }
+}
+
+/* ── Focus visible styles ───────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #00D4FF;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Selection ──────────────────────────────────────────────────────────── */
+::selection {
+  background: rgba(0, 212, 255, 0.25);
+  color: #fff;
+}
+
+/* ── Print ──────────────────────────────────────────────────────────────── */
+@media print {
+  .glass, .glass-light {
+    background: #fff;
+    border: 1px solid #ccc;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
 }
 

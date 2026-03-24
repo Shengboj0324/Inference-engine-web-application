@@ -1,5 +1,5 @@
 'use client'
-import { Cpu, Zap, ArrowRight, DollarSign } from 'lucide-react'
+import { Cpu, Zap, DollarSign } from 'lucide-react'
 
 const tiers = [
   {

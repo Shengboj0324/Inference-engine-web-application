@@ -11,11 +11,11 @@ const footerLinks = {
     { label: 'Changelog', href: '/changelog' },
   ],
   Documentation: [
-    { label: 'Getting Started', href: '/docs' },
+    { label: 'Deployment Guide', href: '/docs/deployment' },
     { label: 'Architecture', href: '/docs/architecture' },
+    { label: 'API Reference', href: '/docs/api' },
     { label: 'LLM Configuration', href: '/docs/llm' },
     { label: 'Training Guide', href: '/docs/training' },
-    { label: 'Contributing', href: `${SITE.repoUrl}/blob/main/CONTRIBUTING.md` },
   ],
   Resources: [
     { label: 'GitHub Repository', href: SITE.repoUrl },
