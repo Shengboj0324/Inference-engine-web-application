@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #050A14;
+  --foreground: #E8EEFF;
+  --font-geist-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-geist-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glow-text-blue {
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+  }
+
+  .glow-text-white {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+
+  .glass {
+    background: rgba(13, 24, 41, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(26, 39, 68, 0.8);
+  }
+
+  .glass-light {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(0, 212, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 212, 255, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .grid-bg-dense {
+    background-image:
+      linear-gradient(rgba(0, 102, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 102, 255, 0.04) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+
+  .gradient-border {
+    position: relative;
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.5), rgba(0, 102, 255, 0.3), rgba(123, 47, 190, 0.4));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold tracking-[0.25em] text-sie-cyan uppercase;
+  }
+
+  .section-heading {
+    @apply text-4xl md:text-5xl font-bold text-white leading-tight;
+  }
+
+  .section-subheading {
+    @apply text-lg text-sie-muted leading-relaxed max-w-2xl;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold text-sm transition-all duration-300 hover:shadow-glow-blue hover:scale-105 hover:brightness-110;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full glass text-white font-semibold text-sm transition-all duration-300 hover:border-sie-cyan/40 hover:bg-white/5;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050A14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A2744;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0066FF;
+}
+
+/* Code block styling */
+pre {
+  background: #0D1829 !important;
+  border: 1px solid #1A2744;
+  border-radius: 12px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  font-family: var(--font-geist-mono);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+code {
+  font-family: var(--font-geist-mono);
+  font-size: 0.875em;
+  background: rgba(0, 212, 255, 0.08);
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+  color: #00D4FF;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  color: #C8D8F0;
+}
+
+/* Animation utilities */
+.animate-in {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Recharts custom styling */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: rgba(26, 39, 68, 0.8);
+}
+
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: #0D1829 !important;
+  border: 1px solid #1A2744 !important;
+  border-radius: 8px !important;
+}
+

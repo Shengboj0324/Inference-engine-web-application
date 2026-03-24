@@ -1,0 +1,14 @@
+# Cloudflare Pages configuration
+# This file configures the Cloudflare Wrangler CLI for local development
+# and deployment to Cloudflare Pages.
+
+name = "social-inference-engine-site"
+compatibility_date = "2024-09-23"
+pages_build_output_dir = "out"
+
+[env.preview]
+name = "social-inference-engine-site-preview"
+
+[env.production]
+name = "social-inference-engine-site"
+

@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "calibrated_on": "2026-03-24",
+  "seed_examples": 107,
+  "scalars": {
+    "lead_opportunity": { "temperature": 0.92, "calibrated": true, "sample_count": 18 },
+    "competitor_weakness": { "temperature": 0.88, "calibrated": true, "sample_count": 14 },
+    "influencer_amplification": { "temperature": 1.05, "calibrated": true, "sample_count": 9 },
+    "churn_risk": { "temperature": 0.79, "calibrated": true, "sample_count": 21 },
+    "misinformation_risk": { "temperature": 0.85, "calibrated": true, "sample_count": 11 },
+    "support_escalation": { "temperature": 0.83, "calibrated": true, "sample_count": 15 },
+    "product_confusion": { "temperature": 1.08, "calibrated": true, "sample_count": 8 },
+    "feature_request_pattern": { "temperature": 0.97, "calibrated": true, "sample_count": 6 },
+    "launch_moment": { "temperature": 0.94, "calibrated": true, "sample_count": 3 },
+    "trend_to_content": { "temperature": 1.12, "calibrated": true, "sample_count": 2 }
+  }
+}
+
